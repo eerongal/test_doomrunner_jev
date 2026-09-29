@@ -1,0 +1,50 @@
+{
+  "doom": {
+    "wad_path": "wads/doomu.wad",
+    "scenario": "doom",
+    "map": "e1m1",
+    "visible": true,
+    "async_mode": true,
+    "screen_resolution": "RES_640X480",
+    "episode_timeout_tics": 4200,
+    "presentation_enabled": true,
+    "skill": 3,
+    "soft_turn_degrees_per_tic": 1.0,
+    "hard_turn_degrees_per_tic": 3.0,
+    "depth_grid_rows": 4,
+    "depth_grid_columns": 8
+  },
+  "server": {
+    "base_url": "http://127.0.0.1:8096",
+    "decision_model": "Qwen3.5-2B",
+    "decision_prompt_profile": "compact",
+    "planner_model": "Qwen3.5-2B",
+    "planner_reasoning_effort": "none",
+    "planner_max_tokens": 320,
+    "planner_timeout_seconds": 20.0,
+    "timeout_seconds": 10.0
+  },
+  "controller": {
+    "decision_pacing": "max",
+    "decision_hz": 4.0,
+    "planner_enabled": true,
+    "planner_interval_seconds": 10.0,
+    "planner_calm_seconds": 8.0,
+    "planner_min_health_for_background_work": 60,
+    "planner_damage_threshold": 15,
+    "planner_critical_health": 30,
+    "survival_retreat_health": 35,
+    "idle_hold_recovery": true,
+    "campaign_navigation": true,
+    "memory_enabled": false,
+    "max_visible_objects": 8,
+    "always_run": false,
+    "observation_mode": "semantic",
+    "raw_history_length": 3,
+    "semantic_control_lease_seconds": 2.0,
+    "serialize_inference_requests": false
+  },
+  "telemetry": {
+    "directory": "logs"
+  }
+}
